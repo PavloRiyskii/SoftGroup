@@ -1,19 +1,13 @@
 package com.company;
 
-import java.util.Scanner;
+public class PalindromCheck{
 
-public class Main {
-
-    public static void main(String[] args) {
-        System.out.println("Enter number");
-        String input = new Scanner(System.in).next();
-        if(isPalindrom(input)) {
-            System.out.println("Input is palindrom.");
-        } else {
-            System.out.println("Input is not a palindrom.");
-        }
-    }
-
+    /**
+     *
+     * O(n/2) where n is number of elements in the string
+     * @param number the string with the number
+     * @return false if number isn`t palindrom or if it`s not a number an true if it is palindrom
+     */
     private static boolean isPalindrom(String number) {
         try{
             Integer.parseInt(number);
@@ -27,4 +21,5 @@ public class Main {
         }
         return true;
     }
+
 }
